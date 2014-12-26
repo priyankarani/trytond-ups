@@ -24,9 +24,9 @@ import unittest
 import trytond.tests.test_tryton
 from trytond.tests.test_tryton import POOL, DB_NAME, USER, CONTEXT
 from trytond.transaction import Transaction
-from trytond.config import CONFIG
+from trytond.config import config
 from trytond.error import UserError
-CONFIG['data_path'] = '.'
+config.set('database', 'path', '.')
 
 
 class TestUPS(unittest.TestCase):
